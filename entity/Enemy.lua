@@ -50,7 +50,7 @@ return function(config)
       x = 0,
       y = 0
     },
-    direction = -1,
+    direction = 'left',
     has_mass = true,
     on_ground = false,
     size = {
@@ -75,8 +75,8 @@ return function(config)
     bounciness = 0.9,
     death_animation = death_right,
     directional_death_animation = {
-      [1] = death_right,
-      [-1] = death_left
+      right = death_right,
+      left = death_left
     },
     points = 10,
     life = 15,

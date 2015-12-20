@@ -108,7 +108,7 @@ return function(controls)
       respawn = function(entity)
         entity.position.x = config.x
         entity.position.y = config.y
-        entity.direction = 1
+        entity.direction = 'right'
         entity.velocity.y = 0
         entity.life = entity.initial_life
       end,
