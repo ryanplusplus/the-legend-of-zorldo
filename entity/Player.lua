@@ -22,6 +22,10 @@ return function(controls)
       frame_time = 0.05
     })
 
+    local walk_up = walk_right
+
+    local walk_down = walk_left
+
     local idle_right = Animation({
       sprites = 'res/player_idle_right.png',
       offsets = {
@@ -39,6 +43,10 @@ return function(controls)
       },
       frame_time = 0.05
     })
+
+    local idle_up = idle_right
+
+    local idle_down = idle_left
 
     local jump_right = Animation({
       sprites = 'res/player_jump_right.png',
@@ -77,13 +85,14 @@ return function(controls)
         x = 0,
         y = 0
       },
-      direction = 1,
-      left_right = {
+      direction = 'right',
+      directional_movement = {
         left_key = controls.left,
         right_key = controls.right,
-        speed = 100
+        up_key = controls.up,
+        down_key = controls.down,
+        speed = 115
       },
-      has_mass = true,
       on_ground = true,
       jump = {
         jumping = false,
@@ -98,10 +107,14 @@ return function(controls)
       movement_animations = {
         walk_right = walk_right,
         walk_left = walk_left,
+        walk_up = walk_up,
+        walk_down = walk_down,
         air_right = jump_right,
         air_left = jump_left,
         idle_right = idle_right,
-        idle_left = idle_left
+        idle_left = idle_left,
+        idle_up = idle_up,
+        idle_down = idle_down
       },
       add_to_world = true,
       player = true,

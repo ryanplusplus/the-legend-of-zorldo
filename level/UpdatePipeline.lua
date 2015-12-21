@@ -3,6 +3,7 @@ return function(world, key_pressed, key_held, on_game_over, on_win)
     (require 'update/AddToWorld')(world),
     (require 'update/Jump')(key_pressed),
     (require 'update/LeftRight')(key_held),
+    (require 'update/DirectionalMovement')(key_held),
     (require 'update/Gravity')(900),
     (require 'update/patrol_ai')(world),
     (require 'update/OneWayPlatformPosition')(world),
