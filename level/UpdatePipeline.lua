@@ -7,6 +7,7 @@ return function(world, key_pressed, key_held, on_game_over, on_win)
     (require 'update/Gravity')(900),
     (require 'update/patrol_ai')(world),
     (require 'update/OneWayPlatformPosition')(world),
+    (require 'update/SimpleCollision')(world),
     (require 'update/NonInteractingPosition')(world),
     (require 'update/extra_life_picked_up'),
     (require 'update/coin_picked_up'),

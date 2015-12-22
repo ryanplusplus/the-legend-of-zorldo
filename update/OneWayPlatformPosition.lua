@@ -1,6 +1,6 @@
 return function(world)
   return function(scene, dt)
-    for entity in pairs(scene:entities_with('velocity', 'position', 'size', 'one_way_platform_position')) do
+    for entity in pairs(scene:entities_with('velocity', 'position', 'size', 'one_way_platform_position', 'on_ground')) do
       local collisions
       local resolved_x, resolved_y
 

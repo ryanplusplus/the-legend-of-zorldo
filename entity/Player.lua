@@ -136,7 +136,7 @@ return function(controls)
       initial_life = 1,
       can_pickup_powerups = true,
       dies_when_off_stage = true,
-      one_way_platform_position = true,
+      simple_collision = true,
       death_sound = 'res/blah.wav'
     }
   end
