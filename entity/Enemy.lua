@@ -3,8 +3,8 @@ local GoldCoin = require 'entity/GoldCoin'
 local SilverCoin = require 'entity/SilverCoin'
 
 return function(config)
-  local walk_right = Animation({
-    sprites = 'res/enemy_walk_right.png',
+  local walk_e = Animation({
+    sprites = 'res/enemy_walk_e.png',
     offsets = {
       x = -6,
       y = -6
@@ -12,8 +12,8 @@ return function(config)
     frame_time = 0.05
   })
 
-  local walk_left = Animation({
-    sprites = 'res/enemy_walk_left.png',
+  local walk_w = Animation({
+    sprites = 'res/enemy_walk_w.png',
     offsets = {
       x = -6,
       y = -6
@@ -21,8 +21,8 @@ return function(config)
     frame_time = 0.05
   })
 
-  local death_left = Animation({
-    sprites = 'res/enemy_die_left.png',
+  local death_w = Animation({
+    sprites = 'res/enemy_die_w.png',
     frame_time = 0.5,
     offsets = {
       x = -6,
@@ -31,8 +31,8 @@ return function(config)
     once = true
   })
 
-  local death_right = Animation({
-    sprites = 'res/enemy_die_right.png',
+  local death_e = Animation({
+    sprites = 'res/enemy_die_e.png',
     frame_time = 0.5,
     offsets = {
       x = -6,
@@ -50,21 +50,21 @@ return function(config)
       x = 0,
       y = 0
     },
-    direction = 'left',
+    direction = 'w',
     has_mass = true,
     on_ground = false,
     size = {
       width = 22,
       height = 26
     },
-    animation = walk_right,
+    animation = walk_e,
     movement_animations = {
-      walk_right = walk_right,
-      walk_left = walk_left,
-      air_right = walk_right,
-      air_left = walk_left,
-      idle_right = walk_right,
-      idle_left = walk_left
+      walk_e = walk_e,
+      walk_w = walk_w,
+      air_e = walk_e,
+      air_w = walk_w,
+      idle_e = walk_e,
+      idle_w = walk_w
     },
     add_to_world = true,
     enemy = true,
@@ -73,10 +73,10 @@ return function(config)
     },
     solid = true,
     bounciness = 0.9,
-    death_animation = death_right,
+    death_animation = death_e,
     directional_death_animation = {
-      right = death_right,
-      left = death_left
+      e = death_e,
+      w = death_w
     },
     points = 10,
     life = 15,

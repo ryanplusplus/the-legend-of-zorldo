@@ -6,16 +6,16 @@ return function(key_held)
 
       if key_held[entity.directional_movement.left_key] then
         entity.velocity.x = -entity.directional_movement.speed
-        entity.direction = 'left'
+        entity.direction = 'w'
       elseif key_held[entity.directional_movement.right_key] then
         entity.velocity.x = entity.directional_movement.speed
-        entity.direction = 'right'
+        entity.direction = 'e'
       elseif key_held[entity.directional_movement.up_key] then
         entity.velocity.y = -entity.directional_movement.speed
-        entity.direction = 'up'
+        entity.direction = 'n'
       elseif key_held[entity.directional_movement.down_key] then
         entity.velocity.y = entity.directional_movement.speed
-        entity.direction = 'down'
+        entity.direction = 's'
       end
     end
   end

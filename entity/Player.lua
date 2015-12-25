@@ -4,8 +4,8 @@ return function(controls)
   return function(config)
     local controls = controls[config.name]
 
-    local walk_right = Animation({
-      sprites = 'res/player_walk_right.png',
+    local walk_e = Animation({
+      sprites = 'res/player_walk_e.png',
       offsets = {
         x = -8,
         y = -6
@@ -13,8 +13,8 @@ return function(controls)
       frame_time = 0.05
     })
 
-    local walk_left = Animation({
-      sprites = 'res/player_walk_left.png',
+    local walk_w = Animation({
+      sprites = 'res/player_walk_w.png',
       offsets = {
         x = -8,
         y = -6
@@ -22,12 +22,12 @@ return function(controls)
       frame_time = 0.05
     })
 
-    local walk_up = walk_right
+    local walk_n = walk_e
 
-    local walk_down = walk_left
+    local walk_s = walk_w
 
-    local idle_right = Animation({
-      sprites = 'res/player_idle_right.png',
+    local idle_e = Animation({
+      sprites = 'res/player_idle_e.png',
       offsets = {
         x = -8,
         y = -6
@@ -35,8 +35,8 @@ return function(controls)
       frame_time = 0.05
     })
 
-    local idle_left = Animation({
-      sprites = 'res/player_idle_left.png',
+    local idle_w = Animation({
+      sprites = 'res/player_idle_w.png',
       offsets = {
         x = -8,
         y = -6
@@ -44,12 +44,12 @@ return function(controls)
       frame_time = 0.05
     })
 
-    local idle_up = idle_right
+    local idle_n = idle_e
 
-    local idle_down = idle_left
+    local idle_s = idle_w
 
-    local jump_right = Animation({
-      sprites = 'res/player_jump_right.png',
+    local jump_e = Animation({
+      sprites = 'res/player_jump_e.png',
       offsets = {
         x = -8,
         y = -6
@@ -57,8 +57,8 @@ return function(controls)
       frame_time = 0.05
     })
 
-    local jump_left = Animation({
-      sprites = 'res/player_jump_left.png',
+    local jump_w = Animation({
+      sprites = 'res/player_jump_w.png',
       offsets = {
         x = -8,
         y = -6
@@ -85,7 +85,7 @@ return function(controls)
         x = 0,
         y = 0
       },
-      direction = 'right',
+      direction = 'e',
       directional_movement = {
         left_key = controls.left,
         right_key = controls.right,
@@ -103,29 +103,29 @@ return function(controls)
         width = 16,
         height = 26
       },
-      animation = idle_right,
+      animation = idle_e,
       movement_animations = {
-        walk_right = walk_right,
-        walk_left = walk_left,
-        walk_up = walk_up,
-        walk_down = walk_down,
-        walk_up_right = walk_right,
-        walk_up_left = walk_left,
-        walk_down_right = walk_right,
-        walk_down_left = walk_left,
-        air_right = jump_right,
-        air_left = jump_left,
-        idle_right = idle_right,
-        idle_left = idle_left,
-        idle_up = idle_up,
-        idle_down = idle_down
+        walk_e = walk_e,
+        walk_w = walk_w,
+        walk_n = walk_n,
+        walk_s = walk_s,
+        walk_ne = walk_e,
+        walk_nw = walk_w,
+        walk_se = walk_e,
+        walk_sw = walk_w,
+        air_e = jump_e,
+        air_w = jump_w,
+        idle_e = idle_e,
+        idle_w = idle_w,
+        idle_n = idle_n,
+        idle_s = idle_s
       },
       add_to_world = true,
       player = true,
       respawn = function(entity)
         entity.position.x = config.x
         entity.position.y = config.y
-        entity.direction = 'right'
+        entity.direction = 'e'
         entity.velocity.y = 0
         entity.life = entity.initial_life
       end,

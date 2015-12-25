@@ -2,7 +2,7 @@ return function(world)
   return function(scene, dt)
     for entity in pairs(scene:entities_with('patrol_ai', 'velocity', 'direction', 'on_ground', 'position')) do
       if entity.on_ground and entity.velocity.x == 0 then
-        if entity.direction == 'right' then
+        if entity.direction == 'e' then
           entity.velocity.x = entity.patrol_ai.speed
         else
           entity.velocity.x = -entity.patrol_ai.speed
@@ -14,7 +14,7 @@ return function(world)
         local x = entity.position.x + dx
         local y = entity.position.y + dy
 
-        if entity.direction == 'right' then
+        if entity.direction == 'e' then
           x = x + entity.size.width
         end
 
@@ -22,7 +22,7 @@ return function(world)
 
         if #items == 0 then
           entity.velocity.x = -entity.velocity.x
-          entity.direction = (entity.direction == 'left') and 'right' or 'left'
+          entity.direction = (entity.direction == 'w') and 'e' or 'w'
         end
       end
     end
