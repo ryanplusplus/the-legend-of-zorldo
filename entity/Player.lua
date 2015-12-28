@@ -8,65 +8,79 @@ return function(controls)
       sprites = 'res/player_walk_e.png',
       offsets = {
         x = -8,
-        y = -6
+        y = -8
       },
-      frame_time = 0.05
+      frame_time = 0.1
     })
 
     local walk_w = Animation({
       sprites = 'res/player_walk_w.png',
       offsets = {
         x = -8,
-        y = -6
+        y = -8
       },
-      frame_time = 0.05
+      frame_time = 0.1
     })
 
-    local walk_n = walk_e
+    local walk_n = Animation({
+      sprites = 'res/player_walk_n.png',
+      offsets = {
+        x = -8,
+        y = -8
+      },
+      frame_time = 0.25
+    })
 
-    local walk_s = walk_w
+    local walk_s = Animation({
+      sprites = 'res/player_walk_s.png',
+      offsets = {
+        x = -8,
+        y = -8
+      },
+      frame_time = 0.1
+    })
 
     local idle_e = Animation({
       sprites = 'res/player_idle_e.png',
       offsets = {
         x = -8,
-        y = -6
+        y = -8
       },
-      frame_time = 0.05
+      frame_time = 0.1
     })
 
     local idle_w = Animation({
       sprites = 'res/player_idle_w.png',
       offsets = {
         x = -8,
-        y = -6
+        y = -8
       },
-      frame_time = 0.05
+      frame_time = 0.1
     })
 
     local idle_n = Animation({
       sprites = 'res/player_idle_n.png',
       offsets = {
         x = -8,
-        y = -6
+        y = -8
       },
-      frame_time = 0.05
+      frame_time = 0.1
     })
 
     local idle_s = Animation({
       sprites = 'res/player_idle_s.png',
       offsets = {
         x = -8,
-        y = -6
+        y = -8
       },
-      frame_time = 0.05
+      frame_time = 0.1
     })
 
     local jump_e = Animation({
       sprites = 'res/player_jump_e.png',
       offsets = {
         x = -8,
-        y = -6
+        y = -8
       },
       frame_time = 0.05
     })
@@ -75,7 +89,7 @@ return function(controls)
       sprites = 'res/player_jump_w.png',
       offsets = {
         x = -8,
-        y = -6
+        y = -8
       },
       frame_time = 0.05
     })
@@ -84,7 +98,7 @@ return function(controls)
       sprites = 'res/player_death.png',
       offsets = {
         x = -8,
-        y = -6
+        y = -8
       },
       frame_time = 0.1,
       once = true
@@ -115,7 +129,7 @@ return function(controls)
       },
       size = {
         width = 16,
-        height = 26
+        height = 16
       },
       animation = idle_e,
       movement_animations = {
