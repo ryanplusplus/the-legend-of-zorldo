@@ -44,7 +44,14 @@ return function(controls)
       frame_time = 0.05
     })
 
-    local idle_n = idle_e
+    local idle_n = Animation({
+      sprites = 'res/player_idle_n.png',
+      offsets = {
+        x = -8,
+        y = -6
+      },
+      frame_time = 0.05
+    })
 
     local idle_s = Animation({
       sprites = 'res/player_idle_s.png',
