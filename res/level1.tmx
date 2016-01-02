@@ -1,68 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="30" tilewidth="16" tileheight="16" nextobjectid="9">
- <tileset firstgid="1" name="tiles" tilewidth="16" tileheight="16">
-  <image source="tiles.png" trans="ff00ff" width="320" height="200"/>
+ <tileset firstgid="1" name="overworld" tilewidth="16" tileheight="16" spacing="1" margin="1" tilecount="162">
+  <image source="overworld_tiles.png" width="307" height="163"/>
  </tileset>
- <layer name="shadow" width="40" height="30">
+ <layer name="walkable" width="40" height="30">
   <data encoding="base64" compression="zlib">
-   eJztl1EKwzAIhnO5rr1Ctl2gT939n4YwQeQ3MZnmYewHoaOt+WY02rOUcgLTat233okQYkNr1cYzlo8IZvazO/wixp7dg/i0XR+7TTC+PjbLtnX45D20RhUM0fHaDCa9v961ZDwz2IrB+xzwW4PYUIwQH++bzr0sWXvaqreImHjZOG4yfiiWK2PGbHLtw2CKrL9f1Mp+OSKZY1Kt+l0lWRdaKO8oN1flHrHpPon4+Jr+x8h5/C0b2dXhk9er6pbZWj2ftCu+LDaOExupNUciZbJZ56pkRFpVq63c8dRHFCPHysuGGLP45D4i/71+ToxHEp+e2ZB/74xb1fs8K5BmZ5boPGFGNGPNMGb0Rev7a+acyToDNKOXbVO/5fdb9DnKjCN+H4afrN5d+4/81dEbdtJ+BQ==
+   eJztzjENACAMAMEmlYAuNKABD4Bu8MDykB9uv4yIlHStAA4v/yRJEtMAHF76zWOBf9LPKlyD63Abpxs72Q==
   </data>
  </layer>
- <layer name="decoration" width="40" height="30">
+ <layer name="obstacle" width="40" height="30">
   <data encoding="base64" compression="zlib">
-   eJztlEEOgjAQRbv1DHgBdVEuoCTiBXCjF9CF3n/vJ4GEENDWvoYF85IfWJCXP80U5wzDMAzDWCte2Ssl4Go9B8CTw9vPSfcrumeqdwd5przt3FvIQ9N7ibmpPR7iR+//dh3OuQF6feuU0i91T+a8xP3IcX+puan/wBhqb3KdXwF5Y/u9lHeElyCm31E5BXy3xP2olEa5KucArwv0/vLEzPlQnhm8hKdWLspNuYNeI5wP7p8STQ==
+   eJxjYBgeQBSNHiyAiUTxgQKDNfwGGqiRgElVTw1sQQJmIFE9NfBQByIE6FEAAaoMkPSojkWOUNjh00stYM4ASY+WdNY7EgA94o8SMJTjbzRsUcFoeNAGeAKxFxGYAUp709l90UAcQwRmgNKxdHZfLhDnYcEwgMwH0fl0dd0oGAWjYBQMPwAA1WYgzQ==
   </data>
  </layer>
- <layer name="not_platform" width="40" height="30">
-  <data encoding="base64" compression="zlib">
-   eJztWEluwzAM1LkB4kMA27kkgP2A9mS/JP3/U6oBOAjDSkpl00mAdADCi2hqtA1lhfAbbbQh2hhtijZH6+V9F+0iRp+dlF0qbWfqTPnkQC6dcEuVkWOf+KYLt23RNib4aY6DXPcFfn9Bm+Ce8mmkrjnk+89ynEK5/zzRCj/ywj0459oGf7RlfAi7a50YNz2f7/mnfDiH7n2/BFvG/sdy1IxLSZfeBd/PJvBkMC9CA6E1nVyhPftwm3voO0sZNSql7R6wOdDmxt74NvL+qK6vgFO0c8hr9KPX3qd5/gj++Rdt9pgXiINxHRxibQG95/GOizZ79CHXbA45DbTzROMkMQ+VXFJ6A5sq42yBnN6wTO9ntcawTTV16H7wWv+NWOpfoCbHY2yp/57axH+0tTGhV+y/81pSCh7rDX3HXFlac0vgkSuo9eS4Zv59mefasSjpC/cYtfpSgtdcxjhgHo+OMb2Bcd5qX/aqgBbbsx4LrR08o+B5BfcZ+nxA67TW/VxsG0vnjB9NfihO
-  </data>
- </layer>
- <layer name="platform" width="40" height="30">
-  <data encoding="base64" compression="zlib">
-   eJztlsEOgyAMhhu36A7bcRdPPoD6ZLr3P66NkrgEFWyL3caX9EAChbQ/PwBkMnYoMC4Y17MP8iVQrcqDa2vGWklieu7mZo38J8v+cyJGOyH3hOY0GI+IvEcYMEaMl/I+W9zB7zsVxk14L8rZKeT1QT3k+OlT6BxSeTRpYepLP4+pdqT9NW1oo6WTNb85m1C/kfBBXw1Svb2kpwZ4enK1SqVJa/fXyj9PCo7HkG/1u7M+cd6S6h2SRPJfYk3Xv0CIr2r+efdyW+cNeLAGnA==
-  </data>
- </layer>
- <objectgroup name="Entities">
+ <objectgroup name="entities">
   <object id="1" name="Player 1" x="87" y="26">
    <properties>
     <property name="name" value="player1"/>
     <property name="type" value="Player"/>
-   </properties>
-  </object>
-  <object id="2" name="Enemy" x="55" y="145">
-   <properties>
-    <property name="type" value="Enemy"/>
-   </properties>
-  </object>
-  <object id="3" name="Enemy" x="547" y="115">
-   <properties>
-    <property name="type" value="Enemy"/>
-   </properties>
-  </object>
-  <object id="4" name="Enemy" x="323" y="267">
-   <properties>
-    <property name="type" value="Enemy"/>
-   </properties>
-  </object>
-  <object id="5" name="Enemy" x="331" y="410">
-   <properties>
-    <property name="type" value="Enemy"/>
-   </properties>
-  </object>
-  <object id="6" name="Extra Life" x="248" y="76">
-   <properties>
-    <property name="type" value="ExtraLife"/>
-   </properties>
-  </object>
-  <object id="7" name="Extra Life" x="416" y="300">
-   <properties>
-    <property name="type" value="ExtraLife"/>
-   </properties>
-  </object>
-  <object id="8" name="Extra Life" x="65" y="284">
-   <properties>
-    <property name="type" value="ExtraLife"/>
    </properties>
   </object>
  </objectgroup>

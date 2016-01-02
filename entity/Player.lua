@@ -128,8 +128,8 @@ return function(controls)
         key = controls.jump
       },
       size = {
-        width = 16,
-        height = 16
+        width = 14,
+        height = 14
       },
       animation = idle_e,
       movement_animations = {

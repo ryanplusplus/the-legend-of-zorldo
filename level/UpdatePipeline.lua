@@ -25,7 +25,7 @@ return function(world, key_pressed, key_held, on_game_over, on_win)
     (require 'update/remove_when_animation_complete'),
     (require 'update/animation'),
     (require 'update/game_over_when_no_players_remain'),
-    (require 'update/win_when_no_enemies_remain'),
+    -- (require 'update/win_when_no_enemies_remain'),
     (require 'update/GameOver')(key_pressed, on_game_over),
     (require 'update/Win')(key_pressed, on_win),
     (require 'update/remove_events')
