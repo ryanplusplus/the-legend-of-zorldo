@@ -8,7 +8,7 @@ return function(controls)
       sprites = 'res/player_walk_e.png',
       offsets = {
         x = -8,
-        y = -8
+        y = -16
       },
       frame_time = 0.1
     })
@@ -17,7 +17,7 @@ return function(controls)
       sprites = 'res/player_walk_w.png',
       offsets = {
         x = -8,
-        y = -8
+        y = -16
       },
       frame_time = 0.1
     })
@@ -26,7 +26,7 @@ return function(controls)
       sprites = 'res/player_walk_n.png',
       offsets = {
         x = -8,
-        y = -8
+        y = -16
       },
       frame_time = 0.25
     })
@@ -35,7 +35,7 @@ return function(controls)
       sprites = 'res/player_walk_s.png',
       offsets = {
         x = -8,
-        y = -8
+        y = -16
       },
       frame_time = 0.1
     })
@@ -44,7 +44,7 @@ return function(controls)
       sprites = 'res/player_idle_e.png',
       offsets = {
         x = -8,
-        y = -8
+        y = -16
       },
       frame_time = 0.1
     })
@@ -53,7 +53,7 @@ return function(controls)
       sprites = 'res/player_idle_w.png',
       offsets = {
         x = -8,
-        y = -8
+        y = -16
       },
       frame_time = 0.1
     })
@@ -62,7 +62,7 @@ return function(controls)
       sprites = 'res/player_idle_n.png',
       offsets = {
         x = -8,
-        y = -8
+        y = -16
       },
       frame_time = 0.1
     })
@@ -71,7 +71,7 @@ return function(controls)
       sprites = 'res/player_idle_s.png',
       offsets = {
         x = -8,
-        y = -8
+        y = -16
       },
       frame_time = 0.1
     })
@@ -80,7 +80,7 @@ return function(controls)
       sprites = 'res/player_jump_e.png',
       offsets = {
         x = -8,
-        y = -8
+        y = -16
       },
       frame_time = 0.05
     })
@@ -89,7 +89,7 @@ return function(controls)
       sprites = 'res/player_jump_w.png',
       offsets = {
         x = -8,
-        y = -8
+        y = -16
       },
       frame_time = 0.05
     })
@@ -98,7 +98,7 @@ return function(controls)
       sprites = 'res/player_death.png',
       offsets = {
         x = -8,
-        y = -8
+        y = -16
       },
       frame_time = 0.1,
       once = true
@@ -128,8 +128,8 @@ return function(controls)
         key = controls.jump
       },
       size = {
-        width = 14,
-        height = 14
+        width = 16,
+        height = 8
       },
       animation = idle_e,
       movement_animations = {
