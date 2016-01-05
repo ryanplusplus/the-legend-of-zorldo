@@ -6,6 +6,8 @@ local function load_tile_map(level_file)
   return map
 end
 
+local unique = {}
+
 local function add_obstacle_tiles_to_world(map, world)
   local layer = map.layers['obstacle']
   for x = 1, map.width do
@@ -24,6 +26,11 @@ local function add_obstacle_tiles_to_world(map, world)
           platform = true,
           solid = true
         }
+
+        if tile.properties.half_collision then
+          block.position.x = block.position.x + tile.width / 2
+          block.size.width = tile.width / 2
+        end
 
         world:add(block, block.position.x, block.position.y, block.size.width, block.size.height)
       end

@@ -2,6 +2,16 @@
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="30" tilewidth="16" tileheight="16" nextobjectid="9">
  <tileset firstgid="1" name="overworld" tilewidth="16" tileheight="16" spacing="1" margin="1" tilecount="162">
   <image source="overworld_tiles.png" width="307" height="163"/>
+  <tile id="21">
+   <properties>
+    <property name="half_collision" value="1"/>
+   </properties>
+  </tile>
+  <tile id="94">
+   <properties>
+    <property name="foo" value="1"/>
+   </properties>
+  </tile>
  </tileset>
  <layer name="walkable" width="40" height="30">
   <data encoding="base64" compression="zlib">
@@ -10,7 +20,7 @@
  </layer>
  <layer name="obstacle" width="40" height="30">
   <data encoding="base64" compression="zlib">
-   eJxjYBgeQBSNHiyAiUTxgQKDNfwGGqiRgElVTw1sQQJmIFE9NfBQByIE6FEAAaoMkPSojkWOUNjh00stYM4ASY+WdNY7EgA94o8SMJTjbzRsUcFoeNAGeAKxFxGYAUp709l90UAcQwRmgNKxdHZfLhDnYcEwgMwH0fl0dd0oGAWjYBQMPwAA1WYgzQ==
+   eJxjYBgeQBSNHiyAiURxegAxLGKDNfwGGqiRgElVTw1sQQJmIFE9NfBQByIE6FEAAaoMkPSojkWOUNjh00stYM4ASY+WdNY7EgA94o8SMJTjbzRsUcFoeNAGeAKxFxGYAUp709l90UAcQwRmgNKxdHZfLhDnYcEwgMwH0fl0dd0oGAWjYBQMPwAARwwg4w==
   </data>
  </layer>
  <objectgroup name="entities">
