@@ -16,6 +16,26 @@ return function(world)
       )
 
       for _, collision in pairs(collisions) do
+        if collision.other.platform and collision.normal.y ~= 0 then
+          if collision.otherRect.x + collision.otherRect.w - entity.position.x <= 5 then
+            entity.position.x, entity.position.y = world:move(
+              entity,
+              collision.otherRect.x + collision.otherRect.w,
+              target_y,
+              function() return 'cross' end
+            )
+          elseif entity.position.x + entity.size.width - collision.otherRect.x <= 5 then
+            entity.position.x, entity.position.y = world:move(
+              entity,
+              collision.otherRect.x - entity.size.width,
+              target_y,
+              function() return 'cross' end
+            )
+          end
+        end
+      end
+
+      for _, collision in pairs(collisions) do
         scene:new_entity({
           event = true,
           ran_into = {
